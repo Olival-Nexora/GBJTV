@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GBJ TV - Sua Próxima Maratona Começa Aqui!</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-image: url('img/header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .hero {
+      background-image: url('img/body-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .plans {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .plan {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      width: 30%;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan h2 {
+      color: #ff8c00;
+    }
+
+    .plan button {
+      background-color: #ff8c00;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .free-trial {
+      text-align: center;
+      padding: 30px;
+      background-color: #e9ecef;
+    }
+
+    @media (max-width: 768px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .plan {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo-gbj-tv.png" alt="Logotipo GBJ TV" />
+  </header>
+
+  <section class="hero">
+    <h1>Assista aos Melhores Filmes, Séries e Esportes!</h1>
+    <p>Experimente GBJ TV e descubra um mundo de entretenimento.</p>
+  </section>
+
+  <section class="plans">
+    <div class="plan">
+      <h2>Plano Mensal</h2>
+      <p>Acesso ilimitado por um mês.</p>
+      <p>R$XX,XX/mês</p>
+      <button>Assinar Agora</button>
+    </div>
+    <div class="plan">
+      <h2>Plano Semestral</h2>
+      <p>Acesso ilimitado por seis meses.</p>
+      <p>R$YYY,YY/semestre (Economize!)</p>
+      <button>Assinar Agora</button>
+    </div>
+    <div class="plan">
+      <h2>Plano Anual</h2>
+      <p>Acesso ilimitado por um ano.</p>
+      <p>R$ZZZ,ZZ/ano (Melhor Custo-Benefício!)</p>
+      <button>Assinar Agora</button>
+    </div>
+  </section>
+
+  <section class="free-trial">
+    <h2>Experimente Grátis por 7 Dias!</h2>
+    <p>Desfrute de todo o nosso conteúdo sem compromisso.</p>
+    <button>Começar Teste Grátis</button>
+  </section>
+
+</body>
+</html>
