@@ -12,6 +12,12 @@
       color: #fff;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
     header {
       position: relative;
       height: 300px;
@@ -41,19 +47,12 @@
       100% { opacity: 0; transform: translateY(-100%); }
     }
 
-    .content,
-    section,
-    .free-trial {
+    .content, .testimonial, .thanks, footer {
       padding: 20px;
       text-align: center;
     }
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .free-trial button {
+    .whatsapp-button {
       background-color: #25D366;
       color: white;
       font-size: 18px;
@@ -61,19 +60,11 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-    }
-
-    footer {
-      background-color: #111;
-      text-align: center;
-      padding: 20px;
-      color: #ccc;
-      font-size: 14px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="slide"></div>
     <div class="slide"></div>
@@ -81,44 +72,33 @@
     <div class="slide"></div>
   </header>
 
-  <section>
-    <p><strong>Maria de Oliveira</strong>, cliente da GBJ TV há oito meses:</p>
-    <em>"Esse plano serve certinho para mim e minha família e cabe no meu bolso..."</em>
-  </section>
+  <div class="content">
+    <p><strong>Maria de Oliveira</strong>, cliente da GBJ TV há 8 meses:</p>
+    <p><em>“Esse plano serve certinho para mim e minha família e cabe no meu bolso...”</em></p>
+    <img src="mensal.png" alt="Plano Mensal">
 
-  <img src="mensal.png" alt="Plano Mensal">
-
-  <section>
     <p><strong>Paulo S. de Souza</strong>:</p>
-    <em>"Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês, sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar..."</em>
-  </section>
+    <p><em>“Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês. Sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar...”</em></p>
+    <img src="semestral.png" alt="Plano Semestral">
 
-  <img src="semestral.png" alt="Plano Semestral">
-
-  <section>
     <p><strong>Francinete de Almeida</strong>:</p>
-    <em>"Eu sou uma pessoa que além de qualidade, procuro economizar sempre que posso. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais..."</em>
-  </section>
+    <p><em>“Eu sou uma pessoa que além de qualidade, procuro economizar sempre que possa. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais...”</em></p>
+    <img src="anual.png" alt="Plano Anual">
+  </div>
 
-  <img src="anual.png" alt="Plano Anual">
-
-  <section>
-    <p><strong>Agradecimento da GBJ TV</strong></p>
-    <p>Gostaríamos de colocar mais comentários, mas destacamos apenas esses 3 entre os mais de 1400 clientes satisfeitos. Vocês são o verdadeiro show dessa programação. Obrigado!</p>
-    <img src="logo.png" alt="Logo da GBJ TV" style="max-width: 180px; margin-top: 20px;">
-  </section>
-
-  <section class="free-trial">
-    <h2>Teste Grátis por 2:00 hs</h2>
-    <p>Sem compromisso. Comece agora sua jornada com a GBJ TV!</p>
+  <div class="thanks">
+    <p><strong>Agradecimento da GBJ TV:</strong></p>
+    <p>Gostaríamos de colocar mais comentários, mas selecionamos apenas esses 3 entre os mais de 1400 clientes satisfeitos.</p>
+    <p><strong>Vocês são o verdadeiro Show dessa programação. Obrigado!</strong></p>
+    <img src="logo.png" alt="Logotipo GBJ TV">
+    <br/>
     <a href="https://wa.me/5511916685766?text=Olá!%20Quero%20fazer%20o%20teste%20grátis%20da%20GBJ%20TV!" target="_blank">
-      <button>Falar no WhatsApp</button>
+      <button class="whatsapp-button">Teste Grátis</button>
     </a>
-  </section>
+  </div>
 
   <footer>
-    © 2025 GBJ TV - Todos os direitos reservados.
+    <p>&copy; 2025 GBJ TV. Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
