@@ -8,72 +8,38 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background: linear-gradient(to bottom, #000000, #2e003e);
+      color: #fff;
     }
 
     header {
-      background-color: #008080;
-      color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 20px 10px;
     }
 
     header img {
-      max-width: 180px;
+      max-width: 100%;
       height: auto;
-      margin-bottom: 10px;
     }
 
-    .hero {
-      background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4c6f');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-    }
-
-    .plans {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
+    .testimonial, .thank-you {
       padding: 20px;
-    }
-
-    .plan {
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 20px;
-      width: 30%;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .plan h2 {
-      color: #ff8c00;
-    }
-
-    .plan button {
-      background-color: #ff8c00;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+    .plan-image {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
     }
 
     .free-trial {
       text-align: center;
-      padding: 40px 20px;
-      background-color: #e9ecef;
+      padding: 30px;
+      background-color: #1c1c1c;
     }
 
     .free-trial button {
@@ -86,60 +52,64 @@
       cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      .plans {
-        flex-direction: column;
-        align-items: center;
-      }
+    .logo-final {
+      display: block;
+      margin: 30px auto 20px auto;
+      max-width: 180px;
+    }
 
-      .plan {
-        width: 80%;
-      }
+    footer {
+      background-color: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="Logotipo da GBJ TV">
-    <h1>GBJ TV - Diversão e Esporte ao Seu Alcance</h1>
+    <img src="cab.png" alt="Cabeçalho da GBJ TV">
   </header>
 
-  <section class="hero">
-    <h1>Filmes, Séries e Esportes ao Vivo</h1>
-    <p>Comece sua maratona com a GBJ TV. Planos acessíveis para todos!</p>
+  <section class="testimonial">
+    <p><strong>Maria de Oliveira</strong>, cliente da GBJ TV há oito meses, comenta:</p>
+    <p><em>"Esse plano serve certinho para mim e minha família e cabe no meu bolso..."</em></p>
   </section>
 
-  <section class="plans">
-    <div class="plan">
-      <h2>Plano Mensal</h2>
-      <p>Acesso ilimitado por 30 dias.</p>
-      <p>R$40,00/mês</p>
-      <button>Assinar Agora</button>
-    </div>
+  <img src="mensal.png" alt="Plano Mensal" class="plan-image">
 
-    <div class="plan">
-      <h2>Plano Semestral</h2>
-      <p>6 meses de conteúdo liberado.</p>
-      <p>R$200,00/semestre</p>
-      <button>Assinar Agora</button>
-    </div>
-
-    <div class="plan">
-      <h2>Plano Anual</h2>
-      <p>12 meses de entretenimento total.</p>
-      <p>R$320,00/ano</p>
-      <button>Assinar Agora</button>
-    </div>
+  <section class="testimonial">
+    <p><strong>Paulo S. de Souza</strong> diz:</p>
+    <p><em>"Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês, sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar..."</em></p>
   </section>
+
+  <img src="semestral.png" alt="Plano Semestral" class="plan-image">
+
+  <section class="testimonial">
+    <p><strong>Francinete de Almeida</strong> comenta:</p>
+    <p><em>"Eu sou uma pessoa que além de qualidade, procuro economizar sempre que possa. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais..."</em></p>
+  </section>
+
+  <section class="thank-you">
+    <p><strong>Agradecimento:</strong></p>
+    <p>A GBJ TV agradece aos clientes que comentaram. Gostaríamos de colocar mais comentários, mas destacamos apenas esses 3 entre os mais de 1400 clientes satisfeitos. Vocês são o verdadeiro show dessa programação. Obrigado!</p>
+  </section>
+
+  <img src="logo.png" alt="Logotipo da GBJ TV" class="logo-final">
 
   <section class="free-trial">
-    <h2>Teste Grátis por 2:00 hs</h2>
+    <h2>Teste Grátis por 2:00 horas</h2>
     <p>Sem compromisso. Comece agora sua jornada com a GBJ TV!</p>
-    <a href="https://wa.me/5511916685766?text=Olá!%20Quero%20fazer%20o%20teste%20grátis%20da%20GBJ%20TV!" target="_blank">
+    <a href="https://wa.me/5511916685766?text=Ol%C3%A1!%20Quero%20fazer%20o%20teste%20gr%C3%A1tis%20da%20GBJ%20TV!" target="_blank">
       <button>Falar no WhatsApp</button>
     </a>
   </section>
+
+  <footer>
+    &copy; 2025 GBJ TV. Todos os direitos reservados. | Contato: suporte@gbjtv.com.br
+  </footer>
 
 </body>
 </html>
