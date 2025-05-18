@@ -8,38 +8,49 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom, #000000, #2e003e);
+      background: linear-gradient(to bottom, #000000, #2c003e);
       color: #fff;
     }
 
     header {
-      text-align: center;
-      padding: 20px 10px;
+      position: relative;
+      height: 300px;
+      overflow: hidden;
     }
 
-    header img {
-      max-width: 100%;
-      height: auto;
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-size: cover;
+      background-position: center;
+      animation: fadeSlide 24s infinite;
     }
 
-    .testimonial, .thank-you {
+    .slide:nth-child(1) { background-image: url('cab.png'); animation-delay: 0s; }
+    .slide:nth-child(2) { background-image: url('mensal.png'); animation-delay: 6s; }
+    .slide:nth-child(3) { background-image: url('semestral.png'); animation-delay: 12s; }
+    .slide:nth-child(4) { background-image: url('anual.png'); animation-delay: 18s; }
+
+    @keyframes fadeSlide {
+      0%   { opacity: 0; transform: translateY(100%); }
+      10%  { opacity: 1; transform: translateY(0); }
+      30%  { opacity: 1; transform: translateY(0); }
+      40%  { opacity: 0; transform: translateY(-100%); }
+      100% { opacity: 0; transform: translateY(-100%); }
+    }
+
+    .content,
+    section,
+    .free-trial {
       padding: 20px;
       text-align: center;
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: 0 auto;
     }
 
-    .plan-image {
-      display: block;
+    img {
       max-width: 100%;
-      margin: 20px auto;
-    }
-
-    .free-trial {
-      text-align: center;
-      padding: 30px;
-      background-color: #1c1c1c;
+      height: auto;
     }
 
     .free-trial button {
@@ -52,68 +63,61 @@
       cursor: pointer;
     }
 
-    .logo-final {
-      display: block;
-      margin: 30px auto 20px auto;
-      max-width: 180px;
-    }
-
     footer {
-      background-color: #000;
-      color: #ccc;
+      background-color: #111;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
+      color: #ccc;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="cab.png" alt="Cabeçalho da GBJ TV">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
   </header>
 
-  <section class="testimonial">
-    <p><strong>Maria de Oliveira</strong>, cliente da GBJ TV há oito meses, comenta:</p>
-    <p><em>"Esse plano serve certinho para mim e minha família e cabe no meu bolso..."</em></p>
+  <section>
+    <p><strong>Maria de Oliveira</strong>, cliente da GBJ TV há oito meses:</p>
+    <em>"Esse plano serve certinho para mim e minha família e cabe no meu bolso..."</em>
   </section>
 
-  <img src="mensal.png" alt="Plano Mensal" class="plan-image">
+  <img src="mensal.png" alt="Plano Mensal">
 
-  <section class="testimonial">
-    <p><strong>Paulo S. de Souza</strong> diz:</p>
-    <p><em>"Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês, sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar..."</em></p>
+  <section>
+    <p><strong>Paulo S. de Souza</strong>:</p>
+    <em>"Eu prefiro ter a certeza de um plano mais longo e não ter que ficar preocupado todo mês, sou prestador de serviços e tem mês que é fraco, assim com 6 meses pago posso me programar..."</em>
   </section>
 
-  <img src="semestral.png" alt="Plano Semestral" class="plan-image">
+  <img src="semestral.png" alt="Plano Semestral">
 
-  <section class="testimonial">
-    <p><strong>Francinete de Almeida</strong> comenta:</p>
-    <p><em>"Eu sou uma pessoa que além de qualidade, procuro economizar sempre que possa. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais..."</em></p>
+  <section>
+    <p><strong>Francinete de Almeida</strong>:</p>
+    <em>"Eu sou uma pessoa que além de qualidade, procuro economizar sempre que posso. E eu tenho nesse plano o melhor dos mundos; programação de alta qualidade e uma economia anual de quase R$ 200,00. É top demais..."</em>
   </section>
 
-<!-- Imagem do plano anual (adicionada) -->
-<div style="text-align:center; margin-bottom: 40px;">
-  <img src="anual.png" alt="Plano Anual" style="max-width:90%; height:auto;">
-  </div>
-  
-  <section class="thank-you">
-    <p><strong>Agradecimento:</strong></p>
-    <p>A GBJ TV agradece aos clientes que comentaram. Gostaríamos de colocar mais comentários, mas destacamos apenas esses 3 entre os mais de 1400 clientes satisfeitos. Vocês são o verdadeiro show dessa programação. Obrigado!</p>
-  </section>
+  <img src="anual.png" alt="Plano Anual">
 
-  <img src="logo.png" alt="Logotipo da GBJ TV" class="logo-final">
+  <section>
+    <p><strong>Agradecimento da GBJ TV</strong></p>
+    <p>Gostaríamos de colocar mais comentários, mas destacamos apenas esses 3 entre os mais de 1400 clientes satisfeitos. Vocês são o verdadeiro show dessa programação. Obrigado!</p>
+    <img src="logo.png" alt="Logo da GBJ TV" style="max-width: 180px; margin-top: 20px;">
+  </section>
 
   <section class="free-trial">
-    <h2>Teste Grátis por 2:00 horas</h2>
+    <h2>Teste Grátis por 2:00 hs</h2>
     <p>Sem compromisso. Comece agora sua jornada com a GBJ TV!</p>
-    <a href="https://wa.me/5511916685766?text=Ol%C3%A1!%20Quero%20fazer%20o%20teste%20gr%C3%A1tis%20da%20GBJ%20TV!" target="_blank">
+    <a href="https://wa.me/5511916685766?text=Olá!%20Quero%20fazer%20o%20teste%20grátis%20da%20GBJ%20TV!" target="_blank">
       <button>Falar no WhatsApp</button>
     </a>
   </section>
 
   <footer>
-    &copy; 2025 GBJ TV. Todos os direitos reservados. | Contato: suporte@gbjtv.com.br
+    © 2025 GBJ TV - Todos os direitos reservados.
   </footer>
 
 </body>
