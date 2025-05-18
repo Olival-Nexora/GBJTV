@@ -121,5 +121,26 @@
     © 2025 GBJ TV - Todos os direitos reservados.
   </footer>
 
+  <!-- ÁUDIO automático com controle de repetição -->
+  <audio id="audioLocucao" autoplay>
+    <source src="locu.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <script>
+    const audio = document.getElementById('audioLocucao');
+    const jaTocou = localStorage.getItem('audioJaTocou');
+
+    if (jaTocou) {
+      audio.pause();
+      audio.removeAttribute('autoplay');
+    } else {
+      audio.play().catch(() => {}); // evita erro se o navegador bloquear autoplay
+      localStorage.setItem('audioJaTocou', 'sim');
+    }
+
+    audio.loop = false;
+  </script>
+
 </body>
 </html>
